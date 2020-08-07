@@ -43,7 +43,7 @@
 
 // File: @openzeppelin/contracts/math/Math.sol
 
-pragma solidity ^0.5.0;
+pragma solidity 0.5.6;
 
 /**
  * @dev Standard math utilities missing in the Solidity language.
@@ -74,8 +74,6 @@ library Math {
 }
 
 // File: @openzeppelin/contracts/math/SafeMath.sol
-
-pragma solidity ^0.5.0;
 
 /**
  * @dev Wrappers over Solidity's arithmetic operations with added overflow
@@ -234,8 +232,6 @@ library SafeMath {
 
 // File: @openzeppelin/contracts/GSN/Context.sol
 
-pragma solidity ^0.5.0;
-
 /*
  * @dev Provides information about the current execution context, including the
  * sender of the transaction and its data. While these are generally available
@@ -264,7 +260,6 @@ contract Context {
 
 // File: @openzeppelin/contracts/ownership/Ownable.sol
 
-pragma solidity ^0.5.0;
 
 /**
  * @dev Contract module which provides a basic access control mechanism, where
@@ -341,8 +336,6 @@ contract Ownable is Context {
 }
 
 // File: @openzeppelin/contracts/token/ERC20/IERC20.sol
-
-pragma solidity ^0.5.0;
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP. Does not include
@@ -421,8 +414,6 @@ interface IERC20 {
 
 // File: @openzeppelin/contracts/utils/Address.sol
 
-pragma solidity ^0.5.5;
-
 /**
  * @dev Collection of functions related to the address type
  */
@@ -491,9 +482,6 @@ library Address {
 }
 
 // File: @openzeppelin/contracts/token/ERC20/SafeERC20.sol
-
-pragma solidity ^0.5.0;
-
 
 
 
@@ -569,9 +557,6 @@ library SafeERC20 {
 
 // File: contracts/IRewardDistributionRecipient.sol
 
-pragma solidity ^0.5.0;
-
-
 
 contract IRewardDistributionRecipient is Ownable {
     address rewardDistribution;
@@ -593,18 +578,11 @@ contract IRewardDistributionRecipient is Ownable {
 
 // File: contracts/CurveRewards.sol
 
-pragma solidity ^0.5.0;
-
-
-
-
-
-
 contract LPTokenWrapper {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    IERC20 public y = IERC20(0xe31e4703da5aaf5f4ab7e8a1cd9133acf0dd5899);
+    IERC20 public y = IERC20(0xe31e4703DA5aaF5F4aB7E8a1cD9133aCf0DD5899);
 
     uint256 private _totalSupply;
     mapping(address => uint256) private _balances;
@@ -631,7 +609,7 @@ contract LPTokenWrapper {
 }
 
 contract PompRewards is LPTokenWrapper, IRewardDistributionRecipient {
-    IERC20 public pomp = IERC20(0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e);
+    IERC20 public pomp = IERC20(0xb635D531B8A5529Bc4d70f055b19c8B4a1d1Bf35);
     uint256 public constant DURATION = 7 days;
 
     uint256 public periodFinish = 0;
