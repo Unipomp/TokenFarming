@@ -1,0 +1,8 @@
+{
+  "name": "unipomp-token-farming",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Unipomp/unipomp-token-farming.git",
+  "author": "Unipomp Team <unipomp.team@protonmail.com>",
+  "license": "GGPL-3.0-only"
+}
